@@ -859,13 +859,6 @@ Python提供了对内存的垃圾收集机制，但是它将不用的内存放�
 
 
 
-
-
-
-
-
-
-
 协程、抽象基类、可哈希、`__slots__`、MRO、鸭子类型、、
 协程、coroutine、coroutine function
 struct sequence、结构序列
