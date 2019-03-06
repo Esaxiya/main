@@ -452,7 +452,6 @@ student7 =姓名: {0},年龄: {1},班级: {2}.format('xin yue', 15, '0525')
 student8 =姓名: {name},年龄: {age},班级: {grade}.format(name='xin yue', age=15, grade='0525')
 
 
---------------------------------------------------------------------------------------------
 
 functools
 可调用对象的高阶函数和操作
@@ -629,7 +628,6 @@ raw、reason、status_code、text、url
 special method、特殊方法、隐式调用的方法、方法的名称以双下划线开头和结尾.
 特殊方法用于支持: 迭代、集合类、属性访问、运算符重载、函数和方法的调用、对象创建和销毁、字符串表示、字符串格式化、上下文管理
 
-====================================================================
 特殊方法
 存在是用来被解释器调用的、通常我们不会使用它
 my_object.__len__() 这种写法、尽管这么写是正确的但不推荐使用
@@ -638,7 +636,6 @@ my_object.__len__() 这种写法、尽管这么写是正确的但不推荐使用
 for i in x: 这个语句的背后用的是iter(x) 方法、而iter(x)函数背后则是x.__iter__()方法
 前提条件是这个方法在x中被实现了
 通过使用内置方法len、iter、str等来使用特殊方法是最好的选择
-====================================================================
 
 特殊方法一览
 可调用模拟   __call__
@@ -651,7 +648,7 @@ for i in x: 这个语句的背后用的是iter(x) 方法、而iter(x)函数背�
 集合模拟     __len__、__getitem__、__setitem__、__delitem__、__contain__
 属性管理     __getattr__、__setattr__、__delattr__、__dir__、__getattribute__
 数值转换     __abs__、__bool__、__complex__、__int__、__float__、__hash__、__index__
-====================================================================
+
 
 一元运算符
 __neg__、__pos__、__abs__、    negative、positive、absolute
@@ -676,7 +673,7 @@ __invert__ ~、__lshift__ <<、__rshift__ >>、__and__ &、__or__ |、__xor__ ^
  、__ilshift__ 、__irshift__ 、__iand__ 、__ior__ 、__ixor__
  当交互两个数的位置时、就会调用反向运算符
 通过特殊方法、自定义数据类型可以表现的和内置类型一样、从而写出更好的代码
-====================================================
+
 
 class __generator(object):           # 表示生成器函数类型的模拟类
 class __asyncgenerator(object):      # 表示异步生成器函数类型的模拟类
@@ -685,7 +682,7 @@ class __method(object):              # 表示方法类型的模拟类
 class __coroutine(object):           # 代表协程类型的模拟类
 class __namedtuple(tuple):           # 命名元组的模拟基类
 class __loader__(object):            # 内置模块的元路径导入
-====================================================
+
 
 class object:   # 最基本的类型
 class int(object):
@@ -695,7 +692,7 @@ class float(object):
 class bytearray(object):
 class bytes(object):
 class complex(object):
-==================================================
+
 
 class range(object):    # 内置range类
 class list(object):     # 内置可变序列
@@ -703,7 +700,6 @@ class tuple(object):    # 内置不可变序列。
 class set(object):      # 无序的独特元素集合。
 class dict(object):     # 字典
 class map(object):      # 创建一个迭代器, 能够返回一个 map 的 obj
-=================================================
 
 class memoryview(object):   # 创建一个新memoryview对象引用给定对象的
 class slice(object):        # 创建切片对象
@@ -711,17 +707,14 @@ class reversed(object):     # 在给定序列值上返回反向迭代器
 class enumerate(object):    # 返回一个枚举对象
 class filter(object):       # 过滤器对象
 class frozenset(object):    # 构建一个不可变的无序的独特元素集合
-================================================
 
 class property(object):      # 提供了可读可写可删除的属性操作
 class staticmethod(object):  # 将函数转换为静态方法。
 class classmethod(object):   # 将函数转换为类方法
-================================================
 
 class super(object):            #
 class zip(object):
 class type(object):
-=================================================
 
 class BaseException(object): # 所有异常的公共基类
 class Exception(BaseException): # 所有非退出异常的公共基类
@@ -730,7 +723,6 @@ class SystemExit(BaseException):
 class StopAsyncIteration(Exception): # 从iterator.__anext__()发出结束信息
 class StopIteration(Exception):          # 从iterator.__next__() 发出结束信号
 class Warning(Exception):
-================================================
 
 class object:
 __setattr__、__getattribute__、__delattr__
@@ -742,7 +734,6 @@ __class__ = None
 __dict__ = {}
 __doc__ = ''
 __module__ = ''
-================================================
 
 def __format__(self, *args, **kwargs):
   Return a formatted version of the string as described by format_spec.
@@ -750,7 +741,6 @@ def __format__(self, *args, **kwargs):
 def __new__(*args, **kwargs):
   Create and return a new object.  See help(type) for accurate signature.
 def __init__(self, value='', encoding=None, errors='strict'):
-=================================================
 
 def __add__(self, *args, **kwargs): Return self+value.
 def __mod__(self, *args, **kwargs): Return self%value.
@@ -763,7 +753,6 @@ def __gt__(self, *args, **kwargs): Return self>value.
 def __le__(self, *args, **kwargs): Return self<=value.
 def __lt__(self, *args, **kwargs): Return self<value.
 def __ne__(self, *args, **kwargs): Return self!=value.
-==================================================
 
 def __repr__(self, *args, **kwargs):       Return repr(self).
 def __str__(self, *args, **kwargs):        Return str(self).
@@ -771,13 +760,11 @@ def __getitem__(self, *args, **kwargs):    Return self[key].
 def __contains__(self, *args, **kwargs):   Return key in self.
 def __getattribute__(self, *args, **kwargs): Return getattr(self, name).
 def __getnewargs__(self, *args, **kwargs):
-=================================================
 
 def __hash__(self, *args, **kwargs):  Return hash(self).
 def __iter__(self, *args, **kwargs):  Implement iter(self).
 def __len__(self, *args, **kwargs):   Return len(self).
 def __sizeof__(self, *args, **kwargs):  Return the size of the string in memory, in bytes.
-======================================================
 
 功能编程模块 [ itertools、functools、functools ]
 itertools模块 - 创建迭代器函数、用于高效循环
